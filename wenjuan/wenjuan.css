@@ -1,0 +1,57 @@
+.top{
+    position: absolute;
+    width: 100%;
+    height: 40px;
+    /* background-color:#aff; */
+    top:  0px;
+    margin: auto;
+}
+.title{
+    top: -5px;
+    position: relative;
+    text-align: center;
+    /* line-height: 40px; */
+    font-family: "微软雅黑";
+}
+.left{
+    position:absolute;
+    top: 40px;
+    width: 100px;
+    height: 800px;
+    /* background-color: red; */
+}
+.but1{
+    position: relative;
+    top: 20px;
+}
+.but2{
+    position: relative;
+    top: 40px;
+}
+.but3{
+    position: relative;
+    left: 400px;
+}
+.right1{
+    position: absolute;
+    top: 40px;
+    left: 100px;
+    width: 1000px;
+    height: 800px;
+    display: none;
+    /* background-color: seagreen; */
+}
+.right2{
+    position: absolute;
+    top: 40px;
+    left: 100px;
+    width: 1000px;
+    height: 800px;
+    background-color: red;
+    display: none;
+}
+
+.problem{
+    position: relative;
+    left: 40px;
+}

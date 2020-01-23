@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="wenjuan.css"/>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>小杨的问卷</title>
+    <script>
+
+    </script>
+</head>
+<body>
+    <div class="top"><p class="title">小杨的问卷</p></div>
+    <div class="left">
+        <button class="but1" onclick="a()">问卷</button>
+        <button class="but2" onclick="c()">填好的</button>
+    </div>
+    <div class="right1">
+        <form class="problem">
+            <h2>1、您的姓名：</h2>
+            <input type="text" name="p1">
+            <h2>2、您的性格：</h2>
+            <input type="radio" name="p2">开朗
+            <input type="radio" name="p2">内向
+            <br/>
+            <input type="radio" name="p2">活泼
+            <h2>3、您觉得杨麒平帅吗</h2>
+            <input type="radio" name="p3">当然
+            <input type="radio" name="p3">必须的啊
+            <h2>4、您来自哪里</h2>
+            <select name="p4">
+                <option>-请选择-</option>
+                <option>北京市</option>
+                <option>上海市</option>
+                <option>天津市</option>
+                <option>重庆市</option>
+                <option>河北省</option>
+                <option">山西省</option>
+                <option>内蒙古自治区</option>
+                <option>辽宁省</option>
+                <option>吉林省</option>
+                <option>黑龙江省</option>
+                <option">江苏省</option>
+                <option">浙江省</option>
+                <option>安徽省</option>
+                <option">福建省</option>
+                <option">江西省</option>
+                <option>山东省</option>
+                <option>河南省</option>
+                <option>湖北省</option>
+                <option>湖南省</option>
+                <option>广东省</option>
+                <option>广西壮族自治区</option>
+                <option>海南省</option>
+                <option>四川省</option>
+                <option>贵州省</option>
+                <option>云南省</option>
+                <option>西藏自治区</option>
+                <option>陕西省</option>
+                <option>甘肃省</option>
+                <option>宁夏回族自治区</option>
+                <option>青海省</option>
+                <option>新疆维吾尔族自治区</option>
+                <option>香港特别行政区</option>
+                <option>澳门特别行政区</option>
+                <option>台湾省</option>
+                <option>其它</option>
+            </select>
+            <h2>5、您的联系方式：</h2>
+            <input type="text" name="p5">
+        </form>
+        <button onclick="b()" class="btu3">提交</button>
+    </div>
+    <div class="right2">
+        <p>你对我们的问卷满意吗？</p>
+        <input type="radio" name ="a">非常好
+        <input type="radio" name ="a">好
+        <input type ="radio" name = "a">差
+        <br/>
+        <button onclick="c()">提交</button>
+    </div>
+
+    <script type="text/javascript">
+        var right1 = document.getElementsByClassName("right1")[0];
+        var right2 = document.getElementsByClassName("right2")[0];
+        var right3 = document.getElementsByClassName("right3")[0];
+        var i = 0;
+        function a(){
+            right1.style.display ="block";
+            right2.style.display = "none";
+        }
+        function b(){
+            right1.style.display ="none";
+            right2.style.display = "block";
+  
+        }
+        function c(){
+            document.write("感谢您填写我们的问卷！！");
+        }
+        
+    </script>
+</body>
+</html>
