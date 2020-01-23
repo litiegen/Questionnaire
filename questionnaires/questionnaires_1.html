@@ -1,0 +1,127 @@
+<html>
+
+<head>
+    <title>大学生在校消费调查表</title>
+    <link rel="stylesheet" type="text/css" href="questionnaire_1.css">
+</head>
+
+<body>
+    <div id="questionnaire_wrap">
+        <div class="questionnaire_top">
+            <button id="questionnaire_return">< 返回</button>
+            <span>问卷调查</span>
+        </div>
+
+        <div id="questionnaire_title">
+            大学生在校消费调查表
+        </div>
+
+        <div id="questionnaire_message">
+            感谢您能抽出几分钟时间来参加本次答题，现在我们就马上开始吧！！
+        </div>
+
+        <div class="questionnaire_questions">
+            <p>1、你是大几的学生？</p>
+            <input type="radio" name="grade" value="大一">大一<br>
+            <input type="radio" name="grade" value="大二">大二<br>
+            <input type="radio" name="grade" value="大三">大三<br>
+            <input type="radio" name="grade" value="大四">大四<br>
+
+            <p>2、每月父母给的固定生活费为多少？</p>
+            <input type="radio" name="cost" value="1000-">1000以下<br>
+            <input type="radio" name="cost" value="1000-2000">1000-2000<br>
+            <input type="radio" name="cost" value="2000-3000">2000-3000<br>
+            <input type="radio" name="cost" value="3000+">3000以上<br>
+
+            <p>3、你每月消费多少？</p>
+            <input type="radio" name="cost" value="1000-">1000以下<br>
+            <input type="radio" name="cost" value="1000-2000">1000-2000<br>
+            <input type="radio" name="cost" value="2000-3000">2000-3000<br>
+            <input type="radio" name="cost" value="3000+">3000以上<br>
+
+            <p>4、你的消费集中于？</p>
+            <input type="checkbox" name="costContent" value="饮食">饮食<br>
+            <input type="checkbox" name="costContent" value="逛街">逛街<br>
+            <input type="checkbox" name="costContent" value="网购">网购<br>
+            <input type="checkbox" name="costContent" value="娱乐">娱乐<br>
+            <input type="checkbox" name="costContent" value="零食">零食<br>
+            <input type="checkbox" name="costContent" value="其他">其他<br>
+
+            <p>5、你的经济来源于？</p>
+            <input type="checkbox" name="economicSource" value="饮食">父母<br>
+            <input type="checkbox" name="economicSource" value="逛街">兼职<br>
+            <input type="checkbox" name="economicSource" value="网购">朋友<br>
+            <input type="checkbox" name="economicSource" value="娱乐">奖学金<br>
+            <input type="checkbox" name="economicSource" value="其他">其他<br>
+
+            <p>6、你觉得每月父母给的生活费用于吃饭方面够吗？</p>
+            <input type="radio" name="ifEnough" value="绰绰有余">绰绰有余<br>
+            <input type="radio" name="ifEnough" value="大致够了">大致够了<br>
+            <input type="radio" name="ifEnough" value="有些紧张">有些紧张<br>
+            <input type="radio" name="ifEnough" value="远远不够">远远不够<br>
+
+            <p>7、你有男（女）朋友吗？</p>
+            <input type="radio" name="lover" value="yes">有<br>
+            <input type="radio" name="lover" value="no">没有<br>
+
+            <p>8、你对每月的花费满意情况如何？</p>
+            <div id="stars">
+                <img src="fmr_img/打分_未选中.png" alt="打分题" class="questionnaire_stars">
+                <img src="fmr_img/打分_未选中.png" alt="打分题" class="questionnaire_stars">
+                <img src="fmr_img/打分_未选中.png" alt="打分题" class="questionnaire_stars">
+                <img src="fmr_img/打分_未选中.png" alt="打分题" class="questionnaire_stars">
+                <img src="fmr_img/打分_未选中.png" alt="打分题" class="questionnaire_stars">
+            </div>
+            <p>9、请提出一些你认为有效的理财方法：</p>
+            <textarea placeholder="请在此处发表你的想法："></textarea>
+            <!--空元素 -->
+            <button id="questionnaire_submit">提交</button>
+        </div>
+
+    </div>
+    <script>
+        var stars = document.getElementsByClassName("questionnaire_stars");
+        stars[0].onclick = function() {
+            for (var j = 0; j < stars.length; j++) { //所有图片更改为未选中
+                stars[j].src = "img/打分_未选中.png";
+            }
+            for (var k = 0; k <= 0; k++) {
+                stars[k].src = "img/打分_选中.png";
+            }
+        }
+        stars[1].onclick = function() {
+            for (var j = 0; j < stars.length; j++) { //所有图片更改为未选中
+                stars[j].src = "img/打分_未选中.png";
+            }
+            for (var k = 0; k <= 1; k++) {
+                stars[k].src = "img/打分_选中.png";
+            }
+        }
+        stars[2].onclick = function() {
+            for (var j = 0; j < stars.length; j++) { //所有图片更改为未选中
+                stars[j].src = "img/打分_未选中.png";
+            }
+            for (var k = 0; k <= 2; k++) {
+                stars[k].src = "img/打分_选中.png";
+            }
+        }
+        stars[3].onclick = function() {
+            for (var j = 0; j < stars.length; j++) { //所有图片更改为未选中
+                stars[j].src = "img/打分_未选中.png";
+            }
+            for (var k = 0; k <= 3; k++) {
+                stars[k].src = "img/打分_选中.png";
+            }
+        }
+        stars[4].onclick = function() {
+            for (var j = 0; j < stars.length; j++) { //所有图片更改为未选中
+                stars[j].src = "img/打分_未选中.png";
+            }
+            for (var k = 0; k <= 4; k++) {
+                stars[k].src = "img/打分_选中.png";
+            }
+        }
+    </script>
+</body>
+
+</html>
