@@ -70,12 +70,13 @@
                 <img src="fmr_img/打分_未选中.png" alt="打分题" class="questionnaire_stars">
                 <img src="fmr_img/打分_未选中.png" alt="打分题" class="questionnaire_stars">
             </div>
+            
             <p>9、请提出一些你认为有效的理财方法：</p>
-            <textarea placeholder="请在此处发表你的想法："></textarea>
-            <!--空元素 -->
+            <textarea placeholder="请在此处发表你的想法："></textarea><!--空元素 -->
+            
             <button id="questionnaire_submit">提交</button>
         </div>
-
+        
     </div>
     <script>
         var stars = document.getElementsByClassName("questionnaire_stars");
@@ -88,7 +89,7 @@
             }
         }
         stars[1].onclick = function() {
-            for (var j = 0; j < stars.length; j++) { //所有图片更改为未选中
+            for (var j = 0; j < stars.length; j++) { 
                 stars[j].src = "fmr_img/打分_未选中.png";
             }
             for (var k = 0; k <= 1; k++) {
@@ -96,7 +97,7 @@
             }
         }
         stars[2].onclick = function() {
-            for (var j = 0; j < stars.length; j++) { //所有图片更改为未选中
+            for (var j = 0; j < stars.length; j++) { 
                 stars[j].src = "fmr_img/打分_未选中.png";
             }
             for (var k = 0; k <= 2; k++) {
@@ -104,7 +105,7 @@
             }
         }
         stars[3].onclick = function() {
-            for (var j = 0; j < stars.length; j++) { //所有图片更改为未选中
+            for (var j = 0; j < stars.length; j++) { 
                 stars[j].src = "fmr_img/打分_未选中.png";
             }
             for (var k = 0; k <= 3; k++) {
@@ -112,7 +113,7 @@
             }
         }
         stars[4].onclick = function() {
-            for (var j = 0; j < stars.length; j++) { //所有图片更改为未选中
+            for (var j = 0; j < stars.length; j++) { 
                 stars[j].src = "fmr_img/打分_未选中.png";
             }
             for (var k = 0; k <= 4; k++) {
