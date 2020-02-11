@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>问卷</title>
+</head>
+<body>
+	<h2>８您来自哪里？</h2>
+	<label class="que2_01">
+		<select name="que8" id="que81">
+			<option>-请选择-</option>
+			<option>北京市</option>
+			<option>上海市</option>
+		</select>
+	</label>
+	<label class="que2_01">
+		<select name="que8" id="que82">
+			<option>-请选择-</option>
+		</select>
+	</label>
+	<div id="pic">
+		
+	</div>
+</body>
+<script type="text/javascript"> 
+	var sf=new Array();
+	sf[0]=new Array("北京市","东城|西城"); 
+	sf[1]=new Array("上海市","黄浦|卢湾"); 
+	var que81 = document.getElementById('que81');
+	var que82 = document.getElementById("que82");
+	
+	que81.onchange = function(){
+		que82.innerHTML='';
+		var sheng = this.value;
+		console.log(sheng)
+		var temp = new Array();
+		for(var i=0;i<sf.length;i++){
+			if(sheng == sf[i][0].toString()){
+				temp = sf[i][1].split("|");
+				for(var j=0;j<temp.length;j++){
+					var op=document.createElement("option");
+					op.innerHTML += temp[j];
+					console.log(op)
+					que82.add(op);
+				}
+			}
+		}
+	}
+</script>
+</html>
