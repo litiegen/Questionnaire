@@ -1,8 +1,11 @@
 <html>
+
 <head>
     <title>大学生在校消费调查表</title>
     <link rel="stylesheet" type="text/css" href="questionnaire_1.css">
+    <script src="http://libs.baidu.com/jquery/1.9.0/jquery.js"></script>
 </head>
+
 <body>
     <div id="questionnaire_wrap">
         <div class="questionnaire_top">
@@ -17,109 +20,342 @@
         <div id="questionnaire_message">
             感谢您能抽出几分钟时间来参加本次答题，现在我们就马上开始吧！！
         </div>
-
         <div class="questionnaire_questions">
             <p>1、你是大几的学生？</p>
-            <input type="radio" name="grade" value="大一">大一<br>
-            <input type="radio" name="grade" value="大二">大二<br>
-            <input type="radio" name="grade" value="大三">大三<br>
-            <input type="radio" name="grade" value="大四">大四<br>
+            <input type="radio" class="questionnaire_radio" name="grade" value="大一">大一<br>
+            <input type="radio" class="questionnaire_radio" name="grade" value="大二">大二<br>
+            <input type="radio" class="questionnaire_radio" name="grade" value="大三">大三<br>
+            <input type="radio" class="questionnaire_radio" name="grade" value="大四">大四<br>
 
-            <p>2、每月父母给的固定生活费为多少？</p>
-            <input type="radio" name="cost" value="1000-">1000以下<br>
-            <input type="radio" name="cost" value="1000-2000">1000-2000<br>
-            <input type="radio" name="cost" value="2000-3000">2000-3000<br>
-            <input type="radio" name="cost" value="3000+">3000以上<br>
+            <p>2、您的性别是？</p>
+            <input type="radio" class="questionnaire_radio" name="sex" value="woman"><img src="fmr_img/女.png" alt="女"><br>
+            <input type="radio" class="questionnaire_radio" name="sex" value="man"><img src="fmr_img/男.png" alt="男"><br>
 
-            <p>3、你每月消费多少？</p>
-            <input type="radio" name="cost" value="1000-">1000以下<br>
-            <input type="radio" name="cost" value="1000-2000">1000-2000<br>
-            <input type="radio" name="cost" value="2000-3000">2000-3000<br>
-            <input type="radio" name="cost" value="3000+">3000以上<br>
-
-            <p>4、你的消费集中于？</p>
-            <input type="checkbox" name="costContent" value="饮食">饮食<br>
-            <input type="checkbox" name="costContent" value="逛街">逛街<br>
-            <input type="checkbox" name="costContent" value="网购">网购<br>
-            <input type="checkbox" name="costContent" value="娱乐">娱乐<br>
-            <input type="checkbox" name="costContent" value="零食">零食<br>
-            <input type="checkbox" name="costContent" value="其他">其他<br>
-
-            <p>5、你的经济来源于？</p>
-            <input type="checkbox" name="economicSource" value="饮食">父母<br>
-            <input type="checkbox" name="economicSource" value="逛街">兼职<br>
-            <input type="checkbox" name="economicSource" value="网购">朋友<br>
-            <input type="checkbox" name="economicSource" value="娱乐">奖学金<br>
-            <input type="checkbox" name="economicSource" value="其他">其他<br>
-
-            <p>6、你觉得每月父母给的生活费用于吃饭方面够吗？</p>
-            <input type="radio" name="ifEnough" value="绰绰有余">绰绰有余<br>
-            <input type="radio" name="ifEnough" value="大致够了">大致够了<br>
-            <input type="radio" name="ifEnough" value="有些紧张">有些紧张<br>
-            <input type="radio" name="ifEnough" value="远远不够">远远不够<br>
-
-            <p>7、你有男（女）朋友吗？</p>
-            <input type="radio" name="lover" value="yes">有<br>
-            <input type="radio" name="lover" value="no">没有<br>
-
-            <p>8、你对每月的花费满意情况如何？</p>
-            <div id="stars">
-                <img src="fmr_img/打分_未选中.png" alt="打分题" class="questionnaire_stars">
-                <img src="fmr_img/打分_未选中.png" alt="打分题" class="questionnaire_stars">
-                <img src="fmr_img/打分_未选中.png" alt="打分题" class="questionnaire_stars">
-                <img src="fmr_img/打分_未选中.png" alt="打分题" class="questionnaire_stars">
-                <img src="fmr_img/打分_未选中.png" alt="打分题" class="questionnaire_stars">
+            <p>3、您所在的地区为？</p>
+            <div id="questionnaire_place">
+                <select id="province">
+                <option selected>--请选择省份--</option>
+            </select>
+                <select id="city">
+                <option selected>--请选择城市--</option>
+            </select>
             </div>
-            
-            <p>9、请提出一些你认为有效的理财方法：</p>
-            <textarea placeholder="请在此处发表你的想法："></textarea><!--空元素 -->
-            
+
+            <p>4、学校附近是否有小吃街或商场？<input type="text" name="shop" id="questionnaire_shop"></p>
+
+            <p>5、每月父母给的固定生活费为多少？</p>
+            <input type="radio" class="questionnaire_radio" name="give" value="1000-">1000以下<br>
+            <input type="radio" class="questionnaire_radio" name="give" value="1000-2000">1000-2000<br>
+            <input type="radio" class="questionnaire_radio" name="give" value="2000-3000">2000-3000<br>
+            <input type="radio" class="questionnaire_radio" name="give" value="3000+">3000以上<br>
+
+            <p>6、你每月消费多少？</p>
+            <input type="radio" class="questionnaire_radio" name="cost" value="1000-">1000以下<br>
+            <input type="radio" class="questionnaire_radio" name="cost" value="1000-2000">1000-2000<br>
+            <input type="radio" class="questionnaire_radio" name="cost" value="2000-3000">2000-3000<br>
+            <input type="radio" class="questionnaire_radio" name="cost" value="3000+">3000以上<br>
+
+            <p>7、你的消费集中于？</p>
+            <input type="checkbox" class="questionnaire_checkbox" name="costContent" value="饮食">饮食<br>
+            <input type="checkbox" class="questionnaire_checkbox" name="costContent" value="逛街">逛街<br>
+            <input type="checkbox" class="questionnaire_checkbox" name="costContent" value="网购">网购<br>
+            <input type="checkbox" class="questionnaire_checkbox" name="costContent" value="娱乐">娱乐<br>
+            <input type="checkbox" class="questionnaire_checkbox" name="costContent" value="零食">零食<br>
+            <input type="checkbox" class="questionnaire_checkbox" name="costContent" value="其他">其他<br>
+
+            <p>8、在<input type="text" id="questionnaire_text" name="month">月消费最高。</p>
+
+            <p>9、选择消费所占比</p>
+            <div id="score">
+                <div class="questionnaire_score">较少</div>
+                <div class="questionnaire_score">少</div>
+                <div class="questionnaire_score">适中</div>
+                <div class="questionnaire_score">多</div>
+                <div class="questionnaire_score">较多</div>
+            </div><br>
+            <span>吃</span>
+            <div id="stars_1-1">
+                <img src="fmr_img/矩阵未选中.png" alt="打分题" class="questionnaire_stars_1-1">
+                <img src="fmr_img/矩阵未选中.png" alt="打分题" class="questionnaire_stars_1-1">
+                <img src="fmr_img/矩阵未选中.png" alt="打分题" class="questionnaire_stars_1-1">
+                <img src="fmr_img/矩阵未选中.png" alt="打分题" class="questionnaire_stars_1-1">
+                <img src="fmr_img/矩阵未选中.png" alt="打分题" class="questionnaire_stars_1-1">
+            </div>
+            <span>喝</span>
+            <div id="stars_1-2">
+                <img src="fmr_img/矩阵未选中.png" alt="打分题" class="questionnaire_stars_1-2">
+                <img src="fmr_img/矩阵未选中.png" alt="打分题" class="questionnaire_stars_1-2">
+                <img src="fmr_img/矩阵未选中.png" alt="打分题" class="questionnaire_stars_1-2">
+                <img src="fmr_img/矩阵未选中.png" alt="打分题" class="questionnaire_stars_1-2">
+                <img src="fmr_img/矩阵未选中.png" alt="打分题" class="questionnaire_stars_1-2">
+            </div>
+            <span>玩</span>
+            <div id="stars_1-3">
+                <img src="fmr_img/矩阵未选中.png" alt="打分题" class="questionnaire_stars_1-3">
+                <img src="fmr_img/矩阵未选中.png" alt="打分题" class="questionnaire_stars_1-3">
+                <img src="fmr_img/矩阵未选中.png" alt="打分题" class="questionnaire_stars_1-3">
+                <img src="fmr_img/矩阵未选中.png" alt="打分题" class="questionnaire_stars_1-3">
+                <img src="fmr_img/矩阵未选中.png" alt="打分题" class="questionnaire_stars_1-3">
+            </div>
+
+            <p>10、你的经济来源于？</p>
+            <input type="checkbox" class="questionnaire_checkbox" name="economicSource" value="饮食">父母<br>
+            <input type="checkbox" class="questionnaire_checkbox" name="economicSource" value="逛街">兼职<br>
+            <input type="checkbox" class="questionnaire_checkbox" name="economicSource" value="网购">朋友<br>
+            <input type="checkbox" class="questionnaire_checkbox" name="economicSource" value="娱乐">奖学金<br>
+            <input type="checkbox" class="questionnaire_checkbox" name="economicSource" value="其他">其他<br>
+
+            <p>11、你觉得每月父母给的生活费用于吃饭方面够吗？</p>
+            <input type="radio" class="questionnaire_radio" name="ifEnough" value="绰绰有余">绰绰有余<br>
+            <input type="radio" class="questionnaire_radio" name="ifEnough" value="大致够了">大致够了<br>
+            <input type="radio" class="questionnaire_radio" name="ifEnough" value="有些紧张">有些紧张<br>
+            <input type="radio" class="questionnaire_radio" name="ifEnough" value="远远不够">远远不够<br>
+
+            <p>12、你有男（女）朋友吗？</p>
+            <input type="radio" class="questionnaire_radio" name="lover" value="yes">有<br>
+            <input type="radio" class="questionnaire_radio" name="lover" value="no">没有<br>
+
+            <p>13、你对每月的花费满意情况如何？</p>
+            <div id="stars_2">
+                <img src="fmr_img/打分_未选中.png" alt="打分题" class="questionnaire_stars_2">
+                <img src="fmr_img/打分_未选中.png" alt="打分题" class="questionnaire_stars_2">
+                <img src="fmr_img/打分_未选中.png" alt="打分题" class="questionnaire_stars_2">
+                <img src="fmr_img/打分_未选中.png" alt="打分题" class="questionnaire_stars_2">
+                <img src="fmr_img/打分_未选中.png" alt="打分题" class="questionnaire_stars_2">
+            </div>
+
+            <p>14、加入月底剩余一些钱，你会？（排序题）</p>
+            <div class="questionnaire_restMoney" onclick="func(this)">拿去吃好吃的
+                <div class="questionnaire_restMoney_point"></div>
+            </div>
+            <div class="questionnaire_restMoney" onclick="func(this)">拿去买衣服、化妆品
+                <div class="questionnaire_restMoney_point"></div>
+            </div>
+            <div class="questionnaire_restMoney" onclick="func(this)">攒小金库里
+                <div class="questionnaire_restMoney_point"></div>
+            </div>
+
+            <p>15、请提出一些你认为有效的理财方法：</p>
+            <textarea placeholder="请在此处发表你的想法："></textarea>
+            <!--空元素 -->
+
+            <p>16、晒一晒你的账单吧</p>
+            <label class="questionnaire_file">
+                <div>点击上传图片</div>
+                <input type="file" name="file" id="questionnaire_file">
+            </label>
+
+            <p style="color: #8a8a8a; font-size: 40px;">问卷就到这里，再次感谢您的配合。</p>
             <button id="questionnaire_submit">提交</button>
         </div>
-        
     </div>
     <script>
-        var stars = document.getElementsByClassName("questionnaire_stars");
-        stars[0].onclick = function() {
-            for (var j = 0; j < stars.length; j++) { //所有图片更改为未选中
-                stars[j].src = "fmr_img/打分_未选中.png";
+        // 地区选择题
+        var placechoose = new Object();
+        placechoose['北京市'] = new Array('朝阳区', '海淀区', '通州区', '房山区', '丰台区', '昌平区', '大兴区', '顺义区', '西城区', '延庆县', '石景山区', '宣武区', '怀柔区', '崇文区', '密云县', '东城区', '平谷区', '门头沟区');
+        placechoose['广东省'] = new Array('东莞市', '广州市', '中山市', '深圳市', '惠州市', '江门市', '珠海市', '汕头市', '佛山市', '湛江市', '河源市', '肇庆市', '清远市', '潮州市', '韶关市', '揭阳市', '阳江市', '梅州市', '云浮市', '茂名市', '汕尾市');
+        placechoose['山东省'] = new Array('济南市', '青岛市', '临沂市', '济宁市', '菏泽市', '烟台市', '淄博市', '泰安市', '潍坊市', '日照市', '威海市', '滨州市', '东营市', '聊城市', '德州市', '莱芜市', '枣庄市');
+        placechoose['江苏省'] = new Array('苏州市', '徐州市', '盐城市', '无锡市', '南京市', '南通市', '连云港市', '常州市', '镇江市', '扬州市', '淮安市', '泰州市', '宿迁市');
+        placechoose['河南省'] = new Array('郑州市', '南阳市', '新乡市', '安阳市', '洛阳市', '信阳市', '平顶山市', '周口市', '商丘市', '开封市', '焦作市', '驻马店市', '濮阳市', '三门峡市', '漯河市', '许昌市', '鹤壁市', '济源市');
+        placechoose['上海市'] = new Array('松江区', '宝山区', '金山区', '嘉定区', '南汇区', '青浦区', '浦东新区', '奉贤区', '徐汇区', '静安区', '闵行区', '黄浦区', '杨浦区', '虹口区', '普陀区', '闸北区', '长宁区', '崇明县', '卢湾区');
+        placechoose['河北省'] = new Array('石家庄市', '唐山市', '保定市', '邯郸市', '邢台市', '河北区', '沧州市', '秦皇岛市', '张家口市', '衡水市', '廊坊市', '承德市');
+        placechoose['浙江省'] = new Array('温州市', '宁波市', '杭州市', '台州市', '嘉兴市', '金华市', '湖州市', '绍兴市', '舟山市', '丽水市', '衢州市');
+        placechoose['香港特别行政区'] = new Array('香港');
+        placechoose['陕西省'] = new Array('西安市', '咸阳市', '宝鸡市', '汉中市', '渭南市', '安康市', '榆林市', '商洛市', '延安市', '铜川市');
+        placechoose['湖南省'] = new Array('长沙市', '邵阳市', '常德市', '衡阳市', '株洲市', '湘潭市', '永州市', '岳阳市', '怀化市', '郴州市', '娄底市', '益阳市', '张家界市', '湘西州');
+        placechoose['重庆市'] = new Array('江北区', '渝北区', '沙坪坝区', '九龙坡区', '万州区', '永川市', '南岸区', '酉阳县', '北碚区', '涪陵区', '秀山县', '巴南区', '渝中区', '石柱县', '忠县', '合川市', '大渡口区', '开县', '长寿区', '荣昌县', '云阳县', '梁平县', '潼南县', '江津市', '彭水县', '綦江县', '璧山县', '黔江区', '大足县', '巫山县', '巫溪县', '垫江县', '丰都县', '武隆县', '万盛区', '铜梁县', '南川市', '奉节县', '双桥区', '城口县');
+        placechoose['福建省'] = new Array('漳州市', '厦门市', '泉州市', '福州市', '莆田市', '宁德市', '三明市', '南平市', '龙岩市');
+        placechoose['天津市'] = new Array('和平区', '北辰区', '河北区', '河西区', '西青区', '津南区', '东丽区', '武清区', '宝坻区', '红桥区', '大港区', '汉沽区', '静海县', '塘沽区', '宁河县', '蓟县', '南开区', '河东区');
+        placechoose['云南省'] = new Array('昆明市', '红河州', '大理州', '文山州', '德宏州', '曲靖市', '昭通市', '楚雄州', '保山市', '玉溪市', '丽江地区', '临沧地区', '思茅地区', '西双版纳州', '怒江州', '迪庆州');
+        placechoose['四川省'] = new Array('成都市', '绵阳市', '广元市', '达州市', '南充市', '德阳市', '广安市', '阿坝州', '巴中市', '遂宁市', '内江市', '凉山州', '攀枝花市', '乐山市', '自贡市', '泸州市', '雅安市', '宜宾市', '资阳市', '眉山市', '甘孜州');
+        placechoose['广西壮族自治区'] = new Array('贵港市', '玉林市', '北海市', '南宁市', '柳州市', '桂林市', '梧州市', '钦州市', '来宾市', '河池市', '百色市', '贺州市', '崇左市', '防城港市');
+        placechoose['安徽省'] = new Array('芜湖市', '合肥市', '六安市', '宿州市', '阜阳市', '安庆市', '马鞍山市', '蚌埠市', '淮北市', '淮南市', '宣城市', '黄山市', '铜陵市', '亳州市', '池州市', '巢湖市', '滁州市');
+        placechoose['海南省'] = new Array('三亚市', '海口市', '琼海市', '文昌市', '东方市', '昌江县', '陵水县', '乐东县', '保亭县', '五指山市', '澄迈县', '万宁市', '儋州市', '临高县', '白沙县', '定安县', '琼中县', '屯昌县');
+        placechoose['江西省'] = new Array('南昌市', '赣州市', '上饶市', '吉安市', '九江市', '新余市', '抚州市', '宜春市', '景德镇市', '萍乡市', '鹰潭市');
+        placechoose['湖北省'] = new Array('武汉市', '宜昌市', '襄樊市', '荆州市', '恩施州', '黄冈市', '孝感市', '十堰市', '咸宁市', '黄石市', '仙桃市', '天门市', '随州市', '荆门市', '潜江市', '鄂州市', '神农架林区');
+        placechoose['山西省'] = new Array('太原市', '大同市', '运城市', '长治市', '晋城市', '忻州市', '临汾市', '吕梁市', '晋中市', '阳泉市', '朔州市');
+        placechoose['辽宁省'] = new Array('大连市', '沈阳市', '丹东市', '辽阳市', '葫芦岛市', '锦州市', '朝阳市', '营口市', '鞍山市', '抚顺市', '阜新市', '盘锦市', '本溪市', '铁岭市');
+        placechoose['台湾省'] = new Array('台北市', '高雄市', '台中市', '新竹市', '基隆市', '台南市', '嘉义市');
+        placechoose['黑龙江'] = new Array('齐齐哈尔市', '哈尔滨市', '大庆市', '佳木斯市', '双鸭山市', '牡丹江市', '鸡西市', '黑河市', '绥化市', '鹤岗市', '伊春市', '大兴安岭地区', '七台河市');
+        placechoose['内蒙古自治区'] = new Array('赤峰市', '包头市', '通辽市', '呼和浩特市', '鄂尔多斯市', '乌海市', '呼伦贝尔市', '兴安盟', '巴彦淖尔盟', '乌兰察布盟', '锡林郭勒盟', '阿拉善盟');
+        placechoose['澳门特别行政区'] = new Array('澳门');
+        placechoose['贵州省'] = new Array('贵阳市', '黔东南州', '黔南州', '遵义市', '黔西南州', '毕节地区', '铜仁地区', '安顺市', '六盘水市');
+        placechoose['甘肃省'] = new Array('兰州市', '天水市', '庆阳市', '武威市', '酒泉市', '张掖市', '陇南地区', '白银市', '定西地区', '平凉市', '嘉峪关市', '临夏回族自治州', '金昌市', '甘南州');
+        placechoose['青海省'] = new Array('西宁市', '海西州', '海东地区', '海北州', '果洛州', '玉树州', '黄南藏族自治州');
+        placechoose['新疆维吾尔自治区'] = new Array('乌鲁木齐市', '伊犁州', '昌吉州', '石河子市', '哈密地区', '阿克苏地区', '巴音郭楞州', '喀什地区', '塔城地区', '克拉玛依市', '和田地区', '阿勒泰州', '吐鲁番地区', '阿拉尔市', '博尔塔拉州', '五家渠市', '克孜勒苏州', '图木舒克市');
+        placechoose['西藏区'] = new Array('拉萨市', '山南地区', '林芝地区', '日喀则地区', '阿里地区', '昌都地区', '那曲地区');
+        placechoose['吉林省'] = new Array('吉林市', '长春市', '白山市', '延边州', '白城市', '松原市', '辽源市', '通化市', '四平市');
+        placechoose['宁夏回族自治区'] = new Array('银川市', '吴忠市', '中卫市', '石嘴山市', '固原市');
+        (function() {
+            var pHtmlStr = '';
+            for (var name in placechoose) {
+                pHtmlStr = pHtmlStr + '<option>' + name + '</option>';
+            }
+            pHtmlStr = pHtmlStr + '<option selected>' + "--请选择省份--" + '</option>';
+            $("#province").html(pHtmlStr);
+            $("#province").change(function() {
+                var pname = $("#province option:selected").text();
+                var pHtmlStr = '';
+                var cityList = placechoose[pname];
+                for (var index in cityList) {
+                    pHtmlStr = pHtmlStr + '<option>' + cityList[index] + '</option>';
+                }
+                pHtmlStr = pHtmlStr + '<option selected>' + "--请选择城市--" + '</option>';
+                $("#city").html(pHtmlStr);
+            });
+            $("#province").change();
+        })();
+
+        // 矩阵多选
+        var stars1_1 = document.getElementsByClassName("questionnaire_stars_1-1");
+        stars1_1[0].onclick = function() {
+            for (var j = 0; j < stars1_1.length; j++) { //所有图片更改为未选中
+                stars1_1[j].src = "fmr_img/矩阵未选中.png";
+            }
+            stars1_1[0].src = "fmr_img/矩阵选中.png";
+        }
+        stars1_1[1].onclick = function() {
+            for (var j = 0; j < stars1_1.length; j++) { //所有图片更改为未选中
+                stars1_1[j].src = "fmr_img/矩阵未选中.png";
+            }
+            stars1_1[1].src = "fmr_img/矩阵选中.png";
+        }
+        stars1_1[2].onclick = function() {
+            for (var j = 0; j < stars1_1.length; j++) { //所有图片更改为未选中
+                stars1_1[j].src = "fmr_img/矩阵未选中.png";
+            }
+            stars1_1[2].src = "fmr_img/矩阵选中.png";
+        }
+        stars1_1[3].onclick = function() {
+            for (var j = 0; j < stars1_1.length; j++) { //所有图片更改为未选中
+                stars1_1[j].src = "fmr_img/矩阵未选中.png";
+            }
+            stars1_1[3].src = "fmr_img/矩阵选中.png";
+        }
+        stars1_1[4].onclick = function() {
+            for (var j = 0; j < stars1_1.length; j++) { //所有图片更改为未选中
+                stars1_1[j].src = "fmr_img/矩阵未选中.png";
+            }
+            stars1_1[4].src = "fmr_img/矩阵选中.png";
+        }
+
+        var stars1_2 = document.getElementsByClassName("questionnaire_stars_1-2");
+        stars1_2[0].onclick = function() {
+            for (var j = 0; j < stars1_2.length; j++) { //所有图片更改为未选中
+                stars1_2[j].src = "fmr_img/矩阵未选中.png";
+            }
+            stars1_2[0].src = "fmr_img/矩阵选中.png";
+        }
+        stars1_2[1].onclick = function() {
+            for (var j = 0; j < stars1_2.length; j++) { //所有图片更改为未选中
+                stars1_2[j].src = "fmr_img/矩阵未选中.png";
+            }
+            stars1_2[1].src = "fmr_img/矩阵选中.png";
+        }
+        stars1_2[2].onclick = function() {
+            for (var j = 0; j < stars1_2.length; j++) { //所有图片更改为未选中
+                stars1_2[j].src = "fmr_img/矩阵未选中.png";
+            }
+            stars1_2[2].src = "fmr_img/矩阵选中.png";
+        }
+        stars1_2[3].onclick = function() {
+            for (var j = 0; j < stars1_2.length; j++) { //所有图片更改为未选中
+                stars1_2[j].src = "fmr_img/矩阵未选中.png";
+            }
+            stars1_2[3].src = "fmr_img/矩阵选中.png";
+        }
+        stars1_2[4].onclick = function() {
+            for (var j = 0; j < stars1_2.length; j++) { //所有图片更改为未选中
+                stars1_2[j].src = "fmr_img/矩阵未选中.png";
+            }
+            stars1_2[4].src = "fmr_img/矩阵选中.png";
+        }
+
+        var stars1_3 = document.getElementsByClassName("questionnaire_stars_1-3");
+        stars1_3[0].onclick = function() {
+            for (var j = 0; j < stars1_3.length; j++) { //所有图片更改为未选中
+                stars1_3[j].src = "fmr_img/矩阵未选中.png";
+            }
+            stars1_3[0].src = "fmr_img/矩阵选中.png";
+        }
+        stars1_3[1].onclick = function() {
+            for (var j = 0; j < stars1_3.length; j++) { //所有图片更改为未选中
+                stars1_3[j].src = "fmr_img/矩阵未选中.png";
+            }
+            stars1_3[1].src = "fmr_img/矩阵选中.png";
+        }
+        stars1_3[2].onclick = function() {
+            for (var j = 0; j < stars1_3.length; j++) { //所有图片更改为未选中
+                stars1_3[j].src = "fmr_img/矩阵未选中.png";
+            }
+            stars1_3[2].src = "fmr_img/矩阵选中.png";
+        }
+        stars1_3[3].onclick = function() {
+            for (var j = 0; j < stars1_3.length; j++) { //所有图片更改为未选中
+                stars1_3[j].src = "fmr_img/矩阵未选中.png";
+            }
+            stars1_3[3].src = "fmr_img/矩阵选中.png";
+        }
+        stars1_3[4].onclick = function() {
+                for (var j = 0; j < stars1_3.length; j++) { //所有图片更改为未选中
+                    stars1_3[j].src = "fmr_img/矩阵未选中.png";
+                }
+                stars1_3[4].src = "fmr_img/矩阵选中.png";
+            }
+            // 打分题
+        var stars2 = document.getElementsByClassName("questionnaire_stars_2");
+        stars2[0].onclick = function() {
+            for (var j = 0; j < stars2.length; j++) { //所有图片更改为未选中
+                stars2[j].src = "fmr_img/打分_未选中.png";
             }
             for (var k = 0; k <= 0; k++) {
-                stars[k].src = "fmr_img/打分_选中.png";
+                stars2[k].src = "fmr_img/打分_选中.png";
             }
         }
-        stars[1].onclick = function() {
-            for (var j = 0; j < stars.length; j++) { 
-                stars[j].src = "fmr_img/打分_未选中.png";
+        stars2[1].onclick = function() {
+            for (var j = 0; j < stars2.length; j++) { //所有图片更改为未选中
+                stars2[j].src = "fmr_img/打分_未选中.png";
             }
             for (var k = 0; k <= 1; k++) {
-                stars[k].src = "fmr_img/打分_选中.png";
+                stars2[k].src = "fmr_img/打分_选中.png";
             }
         }
-        stars[2].onclick = function() {
-            for (var j = 0; j < stars.length; j++) { 
-                stars[j].src = "fmr_img/打分_未选中.png";
+        stars2[2].onclick = function() {
+            for (var j = 0; j < stars2.length; j++) { //所有图片更改为未选中
+                stars2[j].src = "fmr_img/打分_未选中.png";
             }
             for (var k = 0; k <= 2; k++) {
-                stars[k].src = "fmr_img/打分_选中.png";
+                stars2[k].src = "fmr_img/打分_选中.png";
             }
         }
-        stars[3].onclick = function() {
-            for (var j = 0; j < stars.length; j++) { 
-                stars[j].src = "fmr_img/打分_未选中.png";
+        stars2[3].onclick = function() {
+            for (var j = 0; j < stars2.length; j++) { //所有图片更改为未选中
+                stars2[j].src = "fmr_img/打分_未选中.png";
             }
             for (var k = 0; k <= 3; k++) {
-                stars[k].src = "fmr_img/打分_选中.png";
+                stars2[k].src = "fmr_img/打分_选中.png";
             }
         }
-        stars[4].onclick = function() {
-            for (var j = 0; j < stars.length; j++) { 
-                stars[j].src = "fmr_img/打分_未选中.png";
+        stars2[4].onclick = function() {
+            for (var j = 0; j < stars2.length; j++) { //所有图片更改为未选中
+                stars2[j].src = "fmr_img/打分_未选中.png";
             }
             for (var k = 0; k <= 4; k++) {
-                stars[k].src = "fmr_img/打分_选中.png";
+                stars2[k].src = "fmr_img/打分_选中.png";
             }
+        }
+
+        // 排序题
+        var rest = document.getElementsByClassName("questionnaire_restMoney");
+        var tag = 1;
+
+        function func(that) {
+            that.style.background = "#cacaba";
+            console.log(that.childNodes[1]);
+            that.childNodes[1].innerHTML = tag;
+            tag = tag + 1;
         }
     </script>
 </body>
+
 </html>
