@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>questionnaire</title>
+    <link rel="stylesheet" href="questionnaire.css">
+</head>
+<body>
+    <div id="wrap">
+        <div id="wrapp">
+            <h1>对大学生了解手机情况的调查</h1>
+            <div id="questions">
+                <form>
+                    <div id="ques">
+                        <p>1.请问您的性别是</p>
+                        <label><input type="radio" name="sex" value="boy"  id="radio-type"><span></span>男</label><br>
+                        <label><input type="radio" name="sex" value="girl" id="radio-type"><span></span>女</label><br>
+                    </div>
+
+                    <div id="ques">
+                        <p>2.您所在的年级是</p>
+                        <label><input type="radio" name="grade" value="one"   id="radio-type"><span></span>大一</label><br>
+                        <label><input type="radio" name="grade" value="two"   id="radio-type"><span></span>大二</label><br>
+                        <label><input type="radio" name="grade" value="three" id="radio-type"><span></span>大三</label><br>
+                        <label><input type="radio" name="grade" value="four"  id="radio-type"><span></span>大四</label><br>  
+                    </div>
+
+                    <div id="ques">
+                        <p>3.您是否了解手机的品牌</p>
+                        <label><input type="radio" name="brand" value="yes" id="radio-type"><span></span>是</label><br>
+                        <label><input type="radio" name="brand" value="no"  id="radio-type"><span></span>否</label><br>
+                    </div>
+
+                    <div id="ques">
+                        <p>4.您现在用的是什么牌子的手机</p>
+                        <label><input type="radio" name="brand" value="mi"     id="radio-type"><span></span>小米</label><br>
+                        <label><input type="radio" name="brand" value="apple"  id="radio-type"><span></span>苹果</label><br>
+                        <label><input type="radio" name="brand" value="huawei" id="radio-type"><span></span>华为</label><br>
+                        <label><input type="radio" name="brand" value="vivo"   id="radio-type"><span></span>vivo</label><br>
+                        <label><input type="radio" name="brand" value="OPPO"   id="radio-type"><span></span>OPPO</label><br>
+                    </div>
+
+                    <div id="ques">
+                        <p>5.您比较看重手机的哪些参数<span id="choice">&nbsp;&nbsp;[多选题]</span></p>
+                        <label><input type="checkbox" name="arguments" value="color"            id="checkbox-type"><span></span>颜色</label><br>
+                        <label><input type="checkbox" name="arguments" value="pixel"            id="checkbox-type"><span></span>像素</label><br>
+                        <label><input type="checkbox" name="arguments" value="RAM"              id="checkbox-type"><span></span>运行内存</label><br>
+                        <label><input type="checkbox" name="arguments" value="ROM"              id="checkbox-type"><span></span>存储容量</label><br>
+                        <label><input type="checkbox" name="arguments" value="Screen-type"      id="checkbox-type"><span></span>屏幕类型</label><br>
+                        <label><input type="checkbox" name="arguments" value="Screen-size"      id="checkbox-type"><span></span>屏幕尺寸</label><br>
+                        <label><input type="checkbox" name="arguments" value="CPU-model"        id="checkbox-type"><span></span>CPU型号</label><br>
+                        <label><input type="checkbox" name="arguments" value="battery-capacity" id="checkbox-type"><span></span>电池容量</label><br>
+                        <label><input type="checkbox" name="arguments" value="thickness"        id="checkbox-type"><span></span>机身厚度</label><br>
+                        <label><input type="checkbox" name="arguments" value="others"           id="checkbox-type"><span></span>其他<input type="text" class="text"></label><br>
+                    </div>
+
+                    <div id="ques">
+                        <p>6.您多久换一次手机</p>
+                        <input type="text" style="width: 500px;" class="text">
+                    </div>
+
+                    <div id="ques">
+                        <p>7.根据你的喜欢程度为手机品牌排序</p>
+                        <div id="sort"><span class="number"></span>苹果</div>
+                        <div id="sort"><span class="number"></span>小米</div>
+                        <div id="sort"><span class="number"></span>华为</div>
+                        <div id="sort"><span class="number"></span>vivo</div>
+                        <div id="sort"><span class="number"></span>OPPO</div>
+                        <div id="sort"><span class="number"></span>三星</div>
+                        <div id="sort"><span class="number"></span>oneplus</div>
+                        <div id="sort"><span class="number"></span>魅族</div>
+                    </div>
+
+                    <div id="ques">
+                        <p>8.您来自哪里</p>
+                        省/直辖市
+                        <select name="place" id="place">
+                            <option>请选择省份</option>
+                            <option>北京市</option>
+                            <option>上海市</option>
+                            <option>天津市</option>
+                            <option>重庆市</option>
+                            <option>河北省</option>
+                            <option>山西省</option>
+                            <option>内蒙古自治区</option>
+                            <option>辽宁省</option>
+                            <option>吉林省</option>
+                            <option>黑龙江省</option>
+                            <option>江苏省</option>
+                            <option>浙江省</option>
+                            <option>安徽省</option>
+                            <option>福建省</option>
+                            <option>江西省</option>
+                            <option>山东省</option>
+                            <option>河南省</option>
+                            <option>湖北省</option>
+                            <option>湖南省</option>
+                            <option>广东省</option>
+                            <option>广西壮族自治区</option>
+                            <option>海南省</option>
+                            <option>四川省</option>
+                            <option>贵州省</option>
+                            <option>云南省</option>
+                            <option>西藏自治区</option>
+                            <option>陕西省</option>
+                            <option>甘肃省</option>
+                            <option>宁夏回族自治区</option>
+                            <option>青海省</option>
+                            <option>新疆维吾尔族自治区</option>
+                            <option>香港特别行政区</option>
+                            <option>澳门特别行政区</option>
+                            <option>台湾省</option>
+                        </select>
+                        市/区
+                        <select id="city" name="city">
+                            <option>请选择城市</option>
+                        </select>
+                    </div>
+
+                    <div id="ques">
+                        <p>9.你最喜欢下面品牌手机的什么地方</p>
+                        <div id="reasons">
+                            <div id="reason">拍照清晰</div>
+                            <div id="reason">性价比高</div>
+                            <div id="reason">系统稳定</div>
+                            <div id="reason">国产手机</div>
+                        </div>
+                        <div id="phone1">
+                            <span id="phone">小米</span>
+                            <span id="opt">
+                                <label><input type="radio" name="rad1" id="radio-type"><span></span></label>
+                                <label><input type="radio" name="rad1" id="radio-type"><span></span></label>
+                                <label><input type="radio" name="rad1" id="radio-type"><span></span></label>
+                                <label><input type="radio" name="rad1" id="radio-type"><span></span></label>
+                            </span>
+                        </div>
+                        <div id="phone1">
+                            <span id="phone">苹果</span>
+                            <span id="opt">
+                                <label><input type="radio" name="rad2" id="radio-type"><span></span></label>
+                                <label><input type="radio" name="rad2" id="radio-type"><span></span></label>
+                                <label><input type="radio" name="rad2" id="radio-type"><span></span></label>
+                                <label><input type="radio" name="rad2" id="radio-type"><span></span></label>
+                            </span>
+                        </div>
+                        <div id="phone1">
+                            <span id="phone">OPPO</span>
+                            <span id="opt">
+                                <label><input type="radio" name="rad3" id="radio-type"><span></span></label>
+                                <label><input type="radio" name="rad3" id="radio-type"><span></span></label>
+                                <label><input type="radio" name="rad3" id="radio-type"><span></span></label>
+                                <label><input type="radio" name="rad3" id="radio-type"><span></span></label>
+                            </span>
+                        </div>
+                        <div id="phone1">
+                            <span id="phone">华为</span>
+                            <span id="opt">
+                                <label><input type="radio" name="rad4" id="radio-type"><span></span></label>
+                                <label><input type="radio" name="rad4" id="radio-type"><span></span></label>
+                                <label><input type="radio" name="rad4" id="radio-type"><span></span></label>
+                                <label><input type="radio" name="rad4" id="radio-type"><span></span></label>
+                            </span>
+                        </div>
+                        <div id="phone1">
+                            <span id="phone">vivo</span>
+                            <span id="opt">
+                                <label><input type="radio" name="rad5" id="radio-type"><span></span></label>
+                                <label><input type="radio" name="rad5" id="radio-type"><span></span></label>
+                                <label><input type="radio" name="rad5" id="radio-type"><span></span></label>
+                                <label><input type="radio" name="rad5" id="radio-type"><span></span></label>
+                            </span>
+                        </div>
+                    </div>
+
+                    <div id="ques">
+                        <p>10.请猜猜下面各系列是属于哪个品牌的</p>
+                        <div id="series">
+                            <div id="ser">P系列</div>
+                            <div id="ser">X系列</div>
+                            <div id="ser">Redmi系列</div>
+                            <div id="ser">R系列</div>
+                            <div id="ser">mate系列</div>
+                        </div>
+                        <div id="phone1">
+                            <span id="phone">vivo</span>
+                            <span id="boxs">
+                                <label><input type="checkbox" name="chek" id="checkbox-type"><span></span></label>
+                                <label><input type="checkbox" name="chek" id="checkbox-type"><span></span></label>
+                                <label><input type="checkbox" name="chek" id="checkbox-type"><span></span></label>
+                                <label><input type="checkbox" name="chek" id="checkbox-type"><span></span></label>
+                                <label><input type="checkbox" name="chek" id="checkbox-type"><span></span></label>
+                            </span>
+                        </div>
+                        <div id="phone1">
+                            <span id="phone">小米</span>
+                            <span id="boxs">
+                                <label><input type="checkbox" name="chek" id="checkbox-type"><span></span></label>
+                                <label><input type="checkbox" name="chek" id="checkbox-type"><span></span></label>
+                                <label><input type="checkbox" name="chek" id="checkbox-type"><span></span></label>
+                                <label><input type="checkbox" name="chek" id="checkbox-type"><span></span></label>
+                                <label><input type="checkbox" name="chek" id="checkbox-type"><span></span></label>
+                            </span>
+                        </div>
+                        <div id="phone1">
+                            <span id="phone">华为</span>
+                            <span id="boxs">
+                                <label><input type="checkbox" name="chek" id="checkbox-type"><span></span></label>
+                                <label><input type="checkbox" name="chek" id="checkbox-type"><span></span></label>
+                                <label><input type="checkbox" name="chek" id="checkbox-type"><span></span></label>
+                                <label><input type="checkbox" name="chek" id="checkbox-type"><span></span></label>
+                                <label><input type="checkbox" name="chek" id="checkbox-type"><span></span></label>
+                            </span>
+                        </div>
+                        <div id="phone1">
+                            <span id="phone">OPPO</span>
+                            <span id="boxs">
+                                <label><input type="checkbox" name="chek" id="checkbox-type"><span></span></label>
+                                <label><input type="checkbox" name="chek" id="checkbox-type"><span></span></label>
+                                <label><input type="checkbox" name="chek" id="checkbox-type"><span></span></label>
+                                <label><input type="checkbox" name="chek" id="checkbox-type"><span></span></label>
+                                <label><input type="checkbox" name="chek" id="checkbox-type"><span></span></label>
+                            </span>
+                        </div>
+                    </div>
+
+                    <div id="ques">
+                        <p>11.下面哪些是手机芯片型号<span id="choice">&nbsp;&nbsp;[多选题]</span></p>
+                        <label><input type="checkbox" name="chip" id="checkbox-type"><span></span>Kirin980</label><br>
+                        <label><input type="checkbox" name="chip" id="checkbox-type"><span></span>酷睿i7</label><br>
+                        <label><input type="checkbox" name="chip" id="checkbox-type"><span></span>晓龙855</label><br>
+                        <label><input type="checkbox" name="chip" id="checkbox-type"><span></span>Exynos8895</label><br>
+                        <label><input type="checkbox" name="chip" id="checkbox-type"><span></span>龙芯</label><br>
+                    </div>
+
+                    <div id="ques">
+                        <p>12.请上传一张你最喜欢的手机图片</p>
+                        <div id="file" onclick = fileSelect()>点击上传图片</div>
+                        <input type="file" name="fileToUpload" id="fileToUpload" style="display:none;">
+                    </div>
+
+                    <div id="ques">
+                        <p>13.请输入您的手机号码</p>
+                        <input type="text" style="width: 500px;" class="text">
+                    </div>
+
+                    <div id="ques">
+                        <p>14.请从以下方面具体评价一下小米手机</p>
+                        <div id="evaluate">
+                            <div id="evaluates">
+                                <span id="eva">外观</span>
+                                <input type="text" id="text2">
+                            </div>
+                            <div id="evaluates">
+                                <span id="eva">性能</span>
+                                <input type="text" id="text2">
+                            </div>
+                            <div id="evaluates">
+                                <span id="eva">价格</span>
+                                <input type="text" id="text2">
+                            </div>
+                            <div id="evaluates">
+                                <span id="eva">系统</span>
+                                <input type="text" id="text2">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="ques">
+                        <p>15.您觉得您的手机用起来如何？有什么优缺点？您喜欢什么样的手机？</p>
+                        <input type="text" class="text" style="width: 700px;">
+                    </div>
+
+                    <div id="ques">
+                        <p>16.给您了解各种手机品牌的程度打分</p>
+                        <div id="pic">
+                            <img src="images/black-star.png" class="image" title="1"/>
+                            <img src="images/black-star.png" class="image" title="2"/>
+                            <img src="images/black-star.png" class="image" title="3"/>
+                            <img src="images/black-star.png" class="image" title="4"/>
+                            <img src="images/black-star.png" class="image" title="5"/>
+                            <br/>
+                        </div>
+                    </div>
+
+                    <input type="submit" id="submit">
+                </form>
+            </div>
+        </div> 
+    </div>
+</body>
+<script>
+    var numList = document.getElementsByClassName("number");
+    var num = 1;
+    for(var i=0; i<numList.length; i++){
+        numList[i].onclick = function(){
+            this.innerHTML = num++;
+            this.setAttribute("id","back");
+        }
+    }
+	var ct=new Array();
+	ct[0]=new Array("北京市","东城|西城|崇文|宣武|朝阳|丰台|石景山|海淀|门头沟|房山|通州|顺义|昌平|大兴|平谷|怀柔|密云|延庆"); 
+	ct[1]=new Array("上海市","黄浦|卢湾|徐汇|长宁|静安|普陀|闸北|虹口|杨浦|闵行|宝山|嘉定|浦东|金山|松江|青浦|南汇|奉贤|崇明"); 
+	ct[2] = new Array("天津市","和平|东丽|河东|西青|河西|津南|南开|北辰|河北|武清|红挢|塘沽|汉沽|大港|宁河|静海|宝坻|蓟县");
+	ct[3] = new Array("重庆市","万州|涪陵|渝中|大渡口|江北|沙坪坝|九龙坡|南岸|北碚|万盛|双挢|渝北|巴南|黔江|长寿|綦江|潼南|铜梁 |大足|荣昌|壁山|梁平|城口|丰都|垫江|武隆|忠县|开县|云阳|奉节|巫山|巫溪|石柱|秀山|酉阳|彭水|江津|合川|永川|南川");
+	ct[4] = new Array("河北省","石家庄|邯郸|邢台|保定|张家口|承德|廊坊|唐山|秦皇岛|沧州|衡水");
+	ct[5] = new Array("山西省","太原|大同|阳泉|长治|晋城|朔州|吕梁|忻州|晋中|临汾|运城");
+	ct[6] = new Array("内蒙古自治区","呼和浩特|包头|乌海|赤峰|呼伦贝尔盟|阿拉善盟|哲里木盟|兴安盟|乌兰察布盟|锡林郭勒盟|巴彦淖尔盟|伊克昭盟");
+	ct[7] = new Array("辽宁省","沈阳|大连|鞍山|抚顺|本溪|丹东|锦州|营口|阜新|辽阳|盘锦|铁岭|朝阳|葫芦岛");
+	ct[8] = new Array("吉林省","长春|吉林|四平|辽源|通化|白山|松原|白城|延边");
+	ct[9] = new Array("黑龙江省","哈尔滨|齐齐哈尔|牡丹江|佳木斯|大庆|绥化|鹤岗|鸡西|黑河|双鸭山|伊春|七台河|大兴安岭");
+	ct[10] = new Array("江苏省","南京|镇江|苏州|南通|扬州|盐城|徐州|连云港|常州|无锡|宿迁|泰州|淮安");
+	ct[11] = new Array("浙江省","杭州|宁波|温州|嘉兴|湖州|绍兴|金华|衢州|舟山|台州|丽水");
+	ct[12] = new Array("安徽省","合肥|芜湖|蚌埠|马鞍山|淮北|铜陵|安庆|黄山|滁州|宿州|池州|淮南|巢湖|阜阳|六安|宣城|亳州");
+	ct[13] = new Array("福建省","福州|厦门|莆田|三明|泉州|漳州|南平|龙岩|宁德");
+	ct[14] = new Array("江西省","南昌市|景德镇|九江|鹰潭|萍乡|新馀|赣州|吉安|宜春|抚州|上饶");
+	ct[15] = new Array("山东省","济南|青岛|淄博|枣庄|东营|烟台|潍坊|济宁|泰安|威海|日照|莱芜|临沂|德州|聊城|滨州|菏泽");
+	ct[16] = new Array("河南省","郑州|开封|洛阳|平顶山|安阳|鹤壁|新乡|焦作|濮阳|许昌|漯河|三门峡|南阳|商丘|信阳|周口|驻马店|济源");
+	ct[17] = new Array("湖北省","武汉|宜昌|荆州|襄樊|黄石|荆门|黄冈|十堰|恩施|潜江|天门|仙桃|随州|咸宁|孝感|鄂州");
+	ct[18] = new Array("湖南省","长沙|常德|株洲|湘潭|衡阳|岳阳|邵阳|益阳|娄底|怀化|郴州|永州|湘西|张家界");
+	ct[19] = new Array("广东省","广州|深圳|珠海|汕头|东莞|中山|佛山|韶关|江门|湛江|茂名|肇庆|惠州|梅州|汕尾|河源|阳江|清远|潮州|揭阳|云浮");
+	ct[20] = new Array("广西壮族自治区","南宁|柳州|桂林|梧州|北海|防城港|钦州|贵港|玉林|南宁地区|柳州地区|贺州|百色|河池");
+	ct[21] = new Array("海南省","海口|三亚");
+	ct[22] = new Array("四川省","成都|绵阳|德阳|自贡|攀枝花|广元|内江|乐山|南充|宜宾|广安|达川|雅安|眉山|甘孜|凉山|泸州");
+	ct[23] = new Array("贵州省","贵阳|六盘水|遵义|安顺|铜仁|黔西南|毕节|黔东南|黔南");
+	ct[24] = new Array("云南省","昆明|大理|曲靖|玉溪|昭通|楚雄|红河|文山|思茅|西双版纳|保山|德宏|丽江|怒江|迪庆|临沧");
+	ct[25] = new Array("西藏自治区","拉萨|日喀则|山南|林芝|昌都|阿里|那曲");
+	ct[26] = new Array("陕西省","西安|宝鸡|咸阳|铜川|渭南|延安|榆林|汉中|安康|商洛");
+	ct[27] = new Array("甘肃省","兰州|嘉峪关|金昌|白银|天水|酒泉|张掖|武威|定西|陇南|平凉|庆阳|临夏|甘南");
+	ct[28] = new Array("宁夏回族自治区","银川|石嘴山|吴忠|固原");
+	ct[29] = new Array("青海省","西宁|海东|海南|海北|黄南|玉树|果洛|海西");
+	ct[30] = new Array("新疆维吾尔族自治区","乌鲁木齐|石河子|克拉玛依|伊犁|巴音郭勒|昌吉|克孜勒苏柯尔克孜|博尔塔拉|吐鲁番|哈密|喀什|和田|阿克苏");
+	ct[31] = new Array("香港特别行政区","香港特别行政区");
+	ct[32] = new Array("澳门特别行政区","澳门特别行政区");
+	ct[33] = new Array("台湾省","台北|高雄|台中|台南|屏东|南投|云林|新竹|彰化|苗栗|嘉义|花莲|桃园|宜兰|基隆|台东|金门|马祖|澎湖");
+    var place = document.getElementById("place");
+    var city = document.getElementById("city");
+    place.onchange = function(){
+        var province = this.value;
+        var tmpcity = new Array();
+        for(var i=0; i<ct.length; i++){
+            if(province == ct[i][0].toString()){
+                tmpcity = ct[i][1].split("|");
+                city.innerHTML = "";
+                for(var j=0; j<tmpcity.length; j++){
+                    var option = document.createElement("option");
+                    option.innerHTML = tmpcity[j];
+                    city.appendChild(option);
+                }
+            }
+        }
+    }
+    
+    // 上传图片
+    var uplode = document.getElementById("fileToUpload");
+    var file = document.getElementById("file");
+    function fileSelect(){
+        uplode.click();
+    }
+
+    // 打分题
+    var imgList = document.getElementsByClassName("image");
+    var flag = true;
+    for(var i=0; i<imgList.length; i++){
+        imgList[i].onmouseover = function(){
+            if(flag){
+                var index = this.getAttribute("title");
+                for(var j=0; j<index; j++){
+                    imgList[j].src = "images/yellow-star.png";
+                }  
+            }        
+        }
+        imgList[i].onmouseout = function(){
+            if(flag){
+                var index = this.getAttribute("title");
+                for(var j=0; j<index; j++){
+                    imgList[j].src = "images/black-star.png";
+                }
+            }
+        }
+        imgList[i].onclick = function(){
+            flag = !flag;
+        }
+    }
+</script>
+</html>
