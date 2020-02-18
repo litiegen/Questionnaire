@@ -3,6 +3,29 @@
     padding: 0;
 }
 
+
+/* 下拉选框 */
+
+select {
+    width: 300px;
+    height: 70px;
+    margin-left: 20px;
+    font-size: 30px;
+    outline: none;
+    padding-left: 5px;
+    /*去掉默认的下拉三角*/
+    -webkit-appearance: none;
+    /*添加下拉三角图标*/
+    background: url("fmr_img/下拉按钮.jpg") no-repeat right center transparent;
+}
+
+option {
+    font-size: 12px;
+}
+
+
+/* 文本框 */
+
 textarea {
     width: 95%;
     height: 200px;
@@ -16,6 +39,99 @@ textarea {
     color: #8a8a8a;
     font-size: 35px;
 }
+
+
+/* 单选框 */
+
+.questionnaire_radio {
+    position: relative;
+}
+
+.questionnaire_radio:before,
+.questionnaire_radio:after {
+    content: '';
+    display: block;
+    position: absolute;
+    border-radius: 50%;
+    transition: .5s ease;
+    /*渐变 */
+}
+
+.questionnaire_radio:before {
+    top: 0px;
+    left: 0px;
+    width: 26px;
+    height: 26px;
+    background-color: #fff;
+    border: 1px solid #8a8a8a;
+}
+
+.questionnaire_radio:after {
+    top: 6px;
+    left: 6px;
+    width: 8px;
+    height: 8px;
+    background-color: #fff;
+}
+
+.questionnaire_radio:checked:after {
+    top: 1px;
+    left: 1px;
+    width: 27px;
+    height: 27px;
+    background-color: #8a8a8a;
+}
+
+
+/* 多选框 */
+
+.questionnaire_checkbox {
+    position: relative;
+}
+
+.questionnaire_checkbox:before,
+.questionnaire_checkbox:after {
+    content: '';
+    display: block;
+    position: absolute;
+    transition: .3s ease;
+    /*渐变 */
+}
+
+.questionnaire_checkbox:before {
+    top: 0px;
+    left: 0px;
+    width: 26px;
+    height: 26px;
+    background-color: #fff;
+    border: 1px solid #8a8a8a;
+}
+
+.questionnaire_checkbox:after {
+    top: 6px;
+    left: 6px;
+    width: 8px;
+    height: 8px;
+    background-color: #fff;
+}
+
+.questionnaire_checkbox:checked:after {
+    top: 1px;
+    left: 1px;
+    width: 27px;
+    height: 27px;
+    background-color: #8a8a8a;
+}
+
+.questionnaire_checkbox:checked:before {
+    border-color: #8a8a8a;
+}
+
+
+/*******************************************************↑控件css↑**********************************/
+
+
+/*******************************************************↓内容css↓**********************************/
 
 #questionnaire_wrap {
     width: 100%;
@@ -47,6 +163,7 @@ textarea {
 .questionnaire_top span {
     font-size: 46px;
     font-weight: 500;
+    margin: 0 auto;
     position: relative;
     left: 24%;
 }
@@ -67,14 +184,24 @@ textarea {
     margin: 0 auto;
     height: 100px;
     font-size: 36px;
+    text-align: center;
 }
 
 .questionnaire_questions {
     width: 95%;
     height: 200px;
     margin: 0 auto;
+    margin-left: 40px;
     height: 400px;
     font-size: 44px;
+    text-align: left;
+}
+
+.questionnaire_questions>img {
+    width: 100px;
+    height: 100px;
+    position: relative;
+    top: 30px;
 }
 
 .questionnaire_questions p {
@@ -88,17 +215,143 @@ textarea {
     margin-left: 80px;
     margin-right: 30px;
     margin-bottom: 30px;
-    background: blanchedalmond;
 }
 
-#stars {
-    padding-left: 60px;
+#questionnaire_place {
+    margin-left: 60px;
 }
 
-.questionnaire_stars {
+#questionnaire_shop {
+    height: 50px;
+    width: 100px;
+    border: none;
+    outline: none;
+    display: inline;
+    font-size: 44px;
+    color: #8a8a8a;
+    text-align: center;
+    border-bottom: 1.5px solid black;
+    position: relative;
+    left: -70px;
+}
+
+
+/* 矩阵多选 */
+
+#score {
+    padding-left: 115px;
+}
+
+.questionnaire_score {
+    width: 95px;
+    height: 70px;
+    font-size: 30px;
+    text-align: center;
+    border: 1px solid #8a8a8a;
+    border-radius: 50%;
+    display: inline-block;
+    padding-top: 25px;
+    margin-left: 13px;
+}
+
+#stars_1-1,
+#stars_1-2,
+#stars_1-3 {
+    padding-left: 120px;
+    position: relative;
+    top: -60px;
+}
+
+.questionnaire_stars_1-1,
+.questionnaire_stars_1-2,
+.questionnaire_stars_1-3 {
     width: 110px;
     height: 110px;
     cursor: pointer;
+}
+
+.questionnaire_questions span {
+    position: relative;
+    top: 10px;
+    left: 30px;
+}
+
+
+/* 打分题 */
+
+#stars_2 {
+    padding-left: 60px;
+}
+
+.questionnaire_stars_2 {
+    width: 110px;
+    height: 110px;
+    cursor: pointer;
+}
+
+#questionnaire_text {
+    margin: 10px;
+    height: 50px;
+    width: 100px;
+    border: none;
+    outline: none;
+    font-size: 44px;
+    color: #8a8a8a;
+    text-align: center;
+    border-bottom: 2px solid black;
+}
+
+
+/* 排序题 */
+
+.questionnaire_restMoney {
+    width: 95%;
+    height: 80px;
+    color: gray;
+    border: 1px solid #8a8a8a;
+    padding-top: 20px;
+    padding-left: 15px;
+    margin-top: 10px;
+    border-radius: 15px;
+    position: relative;
+}
+
+.questionnaire_restMoney_point {
+    width: 44px;
+    height: 60px;
+    color: #fff;
+    padding-left: 16px;
+    border: 1px solid #8a8a8a;
+    border-radius: 50%;
+    position: absolute;
+    right: 80px;
+    top: 20px;
+}
+
+
+/* 图片上传 */
+
+.questionnaire_file {
+    width: 95%;
+    height: 350px;
+    text-align: center;
+    color: #8a8a8a;
+    border: 1px solid #8a8a8a;
+    position: relative;
+    display: inline-block;
+    overflow: hidden;
+}
+
+.questionnaire_file div {
+    position: relative;
+    top: 140px;
+}
+
+.questionnaire_file input {
+    position: absolute;
+    left: 0;
+    top: 0;
+    opacity: 0;
 }
 
 
